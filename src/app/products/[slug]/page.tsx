@@ -1,4 +1,5 @@
 import React from "react";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: {
@@ -10,6 +11,9 @@ type Props = {
 //https://beta.nextjs.org/docs/routing/fundamentals
 //https://beta.nextjs.org/docs/routing/defining-routes
 function Pants({ params }: Props) {
+  if (params.slug === "nothing") {
+    notFound();
+  }
   return <div>{params.slug} 제품 설명 페이지</div>;
 }
 

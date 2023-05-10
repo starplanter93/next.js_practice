@@ -1,7 +1,21 @@
+import Link from "next/link";
 import React from "react";
 
-function Product() {
-  return <div>Product</div>;
+const products = ["shirt", "pants", "skirt", "shoes"];
+
+function ProductsPage() {
+  return (
+    <div>
+      제품 소개 페이지!
+      <ul>
+        {products.map((product, index) => (
+          <li key={index}>
+            <Link href={`/products/${product}`}>{product}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
-export default Product;
+export default ProductsPage;

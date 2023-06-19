@@ -5,11 +5,11 @@ import Counter from '@/components/Counter';
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
-  console.log('hi');
+  console.log('hi - 서버');
   console.log(os.hostname());
   return (
     <>
-      <h1>홈페이지다!!</h1>;
+      <h1>홈페이지다!!</h1>
       <Counter />
     </>
   );

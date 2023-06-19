@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 function Counter() {
   const [count, setCount] = useState(0);
+  console.log('hi - 클라이언트');
   return (
     <>
       <p>{count}</p>

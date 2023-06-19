@@ -1,7 +1,7 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link';
+import React from 'react';
 
-const products = ["shirt", "pants", "skirt", "shoes"];
+const products = ['shirt', 'pants', 'skirt', 'shoes'];
 
 function ProductsPage() {
   return (

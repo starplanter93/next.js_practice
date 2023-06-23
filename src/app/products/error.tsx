@@ -10,6 +10,7 @@ function ProductsError({ error, reset }: Props) {
   useEffect(() => {
     console.log(error);
   }, [error]);
+
   return (
     <div>
       <h2>Something went wrong!</h2>;

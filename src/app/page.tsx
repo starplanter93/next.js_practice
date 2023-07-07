@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Inter } from '@next/font/google';
+import { Inter } from "next/font/google";
 import os from 'os'; //노드 api
 import Counter from '@/components/Counter';
 const inter = Inter({ subsets: ['latin'] });

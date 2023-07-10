@@ -1,7 +1,8 @@
 import React from 'react';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { getProduct, getProducts } from '@/service/products';
 import Image from 'next/image';
+import GoProductsButton from '@/components/GoProductsButton';
 
 export const revalidate = 3;
 
@@ -24,7 +25,8 @@ async function ProductPage({ params: { slug } }: Props) {
   const product = await getProduct(slug);
 
   if (!product) {
-    notFound();
+    redirect('/products');
+    // notFound();
   }
 
   return (
@@ -36,6 +38,7 @@ async function ProductPage({ params: { slug } }: Props) {
         width='300'
         height='300'
       />
+      <GoProductsButton />
     </>
   );
 }
